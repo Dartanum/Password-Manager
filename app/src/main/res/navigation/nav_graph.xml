@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph"
+            app:startDestination="@id/StartFragment">
+    <fragment
+            android:id="@+id/StartFragment"
+            android:name="ru.dartanum.passwordmanager.fragment.StartFragment"
+            tools:layout="@layout/fragment_start"
+    >
+
+        <action
+                android:id="@+id/action_StartFragment_to_PasswordListFragment"
+                app:destination="@id/PasswordListFragment"
+                app:popUpTo="@id/StartFragment"
+                app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+            android:id="@+id/PasswordListFragment"
+            android:name="ru.dartanum.passwordmanager.fragment.PasswordListFragment"
+            android:label="@string/password_list_fragment_label"
+            tools:layout="@layout/fragment_password_list">
+        <action
+                android:id="@+id/action_FirstFragment_to_SecondFragment"
+                app:destination="@id/PasswordInstanceFragment"/>
+        <action
+                android:id="@+id/action_FirstFragment_to_CreatePasswordFragment"
+                app:destination="@id/CreatePasswordFragment"/>
+    </fragment>
+    <fragment
+            android:id="@+id/PasswordInstanceFragment"
+            android:name="ru.dartanum.passwordmanager.fragment.PasswordInstanceFragment"
+            android:label="@string/password_instance_fragment_label"
+            tools:layout="@layout/fragment_password_instance">
+        <action
+                android:id="@+id/action_SecondFragment_to_FirstFragment"
+                app:destination="@id/PasswordListFragment"/>
+        <argument android:name="data" app:argType="string"/>
+    </fragment>
+    <fragment
+            android:id="@+id/CreatePasswordFragment"
+            tools:layout="@layout/fragment_create_password"
+            android:label="@string/create_password_fragment_label"
+            android:name="ru.dartanum.passwordmanager.fragment.CreatePasswordFragment">
+    </fragment>
+</navigation>

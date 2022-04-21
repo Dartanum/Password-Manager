@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Password Manager</string>
+    <string name="title_activity_password_list">PasswordListActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="password_list_fragment_label">Пароли</string>
+    <string name="password_instance_fragment_label">Пароль</string>
+    <string name="create_password_fragment_label">Создание пароля</string>
+    <string name="enter_master_pswd_label">Введите мастер-пароль</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
